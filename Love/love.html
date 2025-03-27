@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Can We Get a Chance? ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffecf2;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.5s ease-in-out;
+        }
+        .active {
+            left: 0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #ff4081;
+            color: white;
+        }
+        .no {
+            background-color: #bdbdbd;
+            color: white;
+            position: absolute;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff4081;
+        }
+        img {
+            width: 150px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide active" id="slide1">
+        <h1>Will you give us another chance,Please?</h1>
+        <img src="cute.jpeg" alt="Cute character">
+        <div class="buttons">
+            <button class="btn yes" onclick="nextSlide()">Yes </button>
+            <button class="btn no" onmouseover="moveButton(this)">No</button>
+        </div>
+    </div>
+    <div class="slide" id="slide2">
+        <h1><color blue>Hey, I know I made a mistake, and I’m truly sorry for that. I never meant to hurt you. Can we give ourselves another chance and make things right? Let’s do it again, but better this time.</color>  <br><br>
+
+            I am sorry. Please give a ❤️ reaction to the link, and I will get it. 😘<br><br> Let's fix this❤️. <br>I really like our endless talks and you.<br><br>I know NO is not being pressed tho if answer is no give the thumb reaction to the link. </h1>
+        <img src="oof.jpeg" alt="Heart emoji">
+    </div>
+    <script>
+        function nextSlide() {
+            document.getElementById("slide1").classList.remove("active");
+            document.getElementById("slide2").classList.add("active");
+        }
+        function moveButton(button) {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
